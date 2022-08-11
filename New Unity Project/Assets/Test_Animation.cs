@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class Test_Animation : MonoBehaviour
 {
     Animator m_Animator;
-    bool isAttacking = false;
-
     public Slider speedSlider;
 
     // Start is called before the first frame update
@@ -29,12 +27,10 @@ public class Test_Animation : MonoBehaviour
         if (Input.GetKey(KeyCode.I))
         {
             m_Animator.SetTrigger("idleT");
-            isAttacking = false;
         }
         else if (Input.GetKey(KeyCode.A))
         {
             m_Animator.SetTrigger("attackT");
-            isAttacking = true;
         }
     }
 }
