@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class swordSize : MonoBehaviour
 {
     public Slider swordSlider;
+    public LibPdInstance pdPatch;
+
     float scaleFactor;
 
     void Start()
@@ -20,9 +23,9 @@ public class swordSize : MonoBehaviour
     public void OnValueChanged(float diameter)
     {
         transform.localScale = new Vector3(1, diameter*scaleFactor, diameter* scaleFactor);
-        Debug.Log("Diameter" + diameter);
+        //Debug.Log("Diameter" + diameter);
 
         // Here send is where the sword's diameter is sent to Pd
-
+        pdPatch.SendFloat("diameter", diameter);
     }
 }

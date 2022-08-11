@@ -9,6 +9,8 @@ public class swordTrackerData : MonoBehaviour
     float speedScaleFactor = 300;
     float maxSpeed = 40;
 
+    public LibPdInstance pdPatch;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +31,11 @@ public class swordTrackerData : MonoBehaviour
             if (scaledSpeed > maxSpeed)
             {
                 speedScaleFactor = speed;
-                Debug.Log("speedScaleFactor: " + speedScaleFactor);
+                //Debug.Log("speedScaleFactor: " + speedScaleFactor);
             }
 
             // Here send is where scaled speed is sent to Pd
-
+            pdPatch.SendFloat("speed", scaledSpeed);
         }
 
         previousPosition = transform.position;
