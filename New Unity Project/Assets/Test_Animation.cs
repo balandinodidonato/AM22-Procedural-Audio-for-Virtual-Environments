@@ -28,7 +28,8 @@ public class Test_Animation : MonoBehaviour
         {
             m_Animator.SetTrigger("idleT");
         }
-        else if (Input.GetKey(KeyCode.A))
+
+        if (Input.GetKey(KeyCode.A))
         {
             m_Animator.SetTrigger("attackT");
         }
