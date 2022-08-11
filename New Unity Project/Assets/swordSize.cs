@@ -14,9 +14,9 @@ public class swordSize : MonoBehaviour
         swordSlider.value = 1;
     }
 
-    void Update()
+    public void OnValueChanged(float value)
     {
-        Vector3 size = new Vector3(swordSlider.value , swordSlider.value , swordSlider.value );
+        Vector3 size = new Vector3(1, value, value);
         sword.localScale = size;
     }
 }
