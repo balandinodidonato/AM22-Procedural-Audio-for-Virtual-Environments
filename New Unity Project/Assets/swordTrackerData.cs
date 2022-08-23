@@ -8,13 +8,15 @@ public class swordTrackerData : MonoBehaviour
     Vector3 currentPosition;
     float speedScaleFactor = 300;
     float maxSpeed = 40;
+    float speedRaw = 0;
 
     public LibPdInstance pdPatch;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        currentPosition = transform.position;
+        speedRaw = 0;
     }
 
     // Update is called once per frame
@@ -22,24 +24,9 @@ public class swordTrackerData : MonoBehaviour
     {
         currentPosition = transform.position;
 
-        if (currentPosition != previousPosition)
-        {
-            float speed = (currentPosition - previousPosition).magnitude / Time.deltaTime;
-
-            float scaledSpeed = (speed / speedScaleFactor) * maxSpeed;
-
-            if (scaledSpeed > maxSpeed)
-            {
-                speedScaleFactor = speed;
-                //Debug.Log("speedScaleFactor: " + speedScaleFactor);
-            }
-
-            // Here send is where scaled speed is sent to Pd
-            pdPatch.SendFloat("speed", scaledSpeed);
-        }
+        speedRaw = (currentPosition - previousPosition).magnitude / Time.deltaTime;
+        pdPatch.SendFloat("speedUnity", speedRaw);
 
         previousPosition = transform.position;
-
-
     }
 }

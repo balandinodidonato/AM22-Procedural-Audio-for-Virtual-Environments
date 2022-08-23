@@ -26,6 +26,6 @@ public class swordSize : MonoBehaviour
         //Debug.Log("Diameter" + diameter);
 
         // Here send is where the sword's diameter is sent to Pd
-        pdPatch.SendFloat("diameter", diameter);
+        pdPatch.SendFloat("diameterUnity", diameter);
     }
 }

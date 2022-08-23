@@ -1,0 +1,47 @@
+#N canvas 398 236 536 369 12;
+#X obj 89 78 *~;
+#X obj 126 78 *~;
+#X obj 53 79 *~;
+#X obj 53 106 *~;
+#X obj 53 133 *~;
+#X obj 54 224 s~ mySpGain;
+#X obj 53 159 /~ 7.3e+08;
+#X text 45 263 The gain of the aeroacoustic sound is proportional to
+the 6th power of the speed;
+#X text 132 158 Normalised for a max speed of 30 m/s;
+#X obj 53 42 line~;
+#X obj 56 -2 hsl 128 15 0 30 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X msg 53 18 \$1 10;
+#X floatatom 104 19 0 0 0 0 - - - 0;
+#X obj 289 45 metro 100;
+#X obj 289 70 s myMet;
+#X obj 289 22 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 288 0 loadbang;
+#X obj 184 184 r myMet;
+#X obj 184 207 snapshot~;
+#X floatatom 185 230 0 0 0 0 - - - 0;
+#X obj 54 -25 r speed;
+#X connect 0 0 3 1;
+#X connect 1 0 4 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
+#X connect 6 0 18 0;
+#X connect 9 0 0 0;
+#X connect 9 0 0 1;
+#X connect 9 0 1 0;
+#X connect 9 0 1 1;
+#X connect 9 0 2 1;
+#X connect 9 0 2 0;
+#X connect 10 0 11 0;
+#X connect 10 0 12 0;
+#X connect 11 0 9 0;
+#X connect 13 0 14 0;
+#X connect 15 0 13 0;
+#X connect 16 0 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 20 0 10 0;
