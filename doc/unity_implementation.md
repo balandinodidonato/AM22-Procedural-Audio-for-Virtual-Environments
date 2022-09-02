@@ -1,0 +1,2 @@
+1. [Download](https://github.com/balandinodidonato/AM22-Procedural-Audio-for-Virtual-Environments/archive/refs/heads/main.zip) the the whole content of the repository.
+2. Open the project in Unity 2021.3.5f1
