@@ -1,0 +1,25 @@
+#N canvas 563 590 622 320 12;
+#X obj 51 125 line~;
+#X msg 51 99 \$1 50;
+#X obj 51 149 *~;
+#X obj 52 271 s~ myDistanceGain;
+#X text 146 229 The gain of the aeroacoustic sound is proportional
+to the inverse square of the distance;
+#X obj 55 55 hsl 128 15 1 10 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X text 117 72 Distance in metres;
+#X floatatom 52 75 0 0 0 0 - - - 0;
+#X obj 141 158 r myMet;
+#X obj 141 181 snapshot~;
+#X floatatom 142 204 0 0 0 0 - - - 0;
+#X obj 52 24 r distance;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 0 9 0;
+#X connect 5 0 7 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 11 0 5 0;

@@ -1,0 +1,35 @@
+#N canvas 121 159 667 359 12;
+#X obj 89 161 /~ 360;
+#X obj 89 211 cos~;
+#X obj 92 89 hsl 128 15 -180 180 0 0 empty empty Angle -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 89 137 line~;
+#X msg 89 111 \$1 50;
+#X floatatom 149 113 0 0 0 0 - - - 0;
+#X obj 200 248 r myMet;
+#X obj 200 273 snapshot~;
+#X floatatom 200 297 0 0 0 0 - - - 0;
+#X obj 89 317 s~ myAngleGain;
+#X obj 89 185 +~ 0.25;
+#X obj 89 235 *~;
+#X text 287 48 The sound source for this type of aeroacoustic sound
+is a dipole. This is created by multiplying the gain by sin squared
+of the elevation angle.;
+#X obj 89 40 r angle;
+#X obj 172 39 loadbang;
+#X msg 172 63 90;
+#X connect 0 0 10 0;
+#X connect 1 0 11 0;
+#X connect 1 0 11 1;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 10 0 1 0;
+#X connect 11 0 7 0;
+#X connect 11 0 9 0;
+#X connect 13 0 2 0;
+#X connect 14 0 15 0;
+#X connect 15 0 2 0;
