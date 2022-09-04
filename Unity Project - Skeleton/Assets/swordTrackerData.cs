@@ -8,8 +8,6 @@ public class swordTrackerData : MonoBehaviour
     Vector3 currentPosition;
     float speedRaw;
 
-    public LibPdInstance pdPatch;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +21,6 @@ public class swordTrackerData : MonoBehaviour
         currentPosition = transform.position; // stores the current position
 
         speedRaw = (currentPosition - previousPosition).magnitude / Time.deltaTime; // calculates the difference of the sword position between frames
-        pdPatch.SendFloat("speedUnity", speedRaw); // sends the speed value to the Pure Data patch
 
         previousPosition = transform.position; // stores the value of the current position to be used as previous position the next time the Update function is called
     }

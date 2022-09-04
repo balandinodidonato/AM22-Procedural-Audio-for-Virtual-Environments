@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class swordSize : MonoBehaviour
 {
     public Slider swordSlider;
-    public LibPdInstance pdPatch;
 
     float scaleFactor;
 
@@ -24,6 +23,5 @@ public class swordSize : MonoBehaviour
     public void OnValueChanged(float diameter)
     {
         transform.localScale = new Vector3(1, diameter * scaleFactor, diameter * scaleFactor); // scales the y and w dimensions of the sword
-        pdPatch.SendFloat("diameterUnity", diameter); // sends diameter data to the Pure Data patch
     }
 }
