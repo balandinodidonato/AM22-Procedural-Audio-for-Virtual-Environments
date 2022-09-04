@@ -11,5 +11,6 @@ Participants can either install [Unity 2021.3.5f1](https://unity3d.com/get-unity
 We will also use the [LibPd Unity Interagration](https://github.com/LibPdIntegration/LibPdIntegration), **which is already in this repository** (there is no need for you to download it again). 
 
 ## Links
+- [Unity implementation documentation](./doc/unity_implementation.md)
 - [Audio Mostly 2022 Conference programe](https://audiomostly.fhstp.ac.at/programme#accordion-197058-content)
 - [Workshop submission](./DiDonato_Selfridge_2022.pdf)
