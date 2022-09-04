@@ -12,11 +12,28 @@
 
 5. Select the "swordTracker" game object and
 
-    5.1. Link the swingModelSound PD instance to the sword]
+    ![image](./sword_tracker_data_stript_0.png)
+
+    5.1. Open the SwordDataTracker Script and create a LibPdInstance object which will allow to send data to the pd patch; and, send the speed value to the Pure Data patch
+
+    ![image](./speedTracker_code_LibPdInstance.png)
+
+    ![image](./speedTracker_PdPatchSend.png)
+
+    5.2. Link the swingModelSound PD instance to the sword]
 
     ![image](./Sword_tracker_data.png)
 
-    5.2. Open the SwordDataTracker Script and create a LibPdInstance object which will allow to send data to the pd patch; and, send the speed value to the Pure Data patch
+6. Select the "sword01" game object and
+
+    ![image](./SwordSizeScript_01.png)
+
+    6.1. Open the SwordSize Script and create a LibPdInstance object which will allow to send data to the pd patch; and, send the speed value to the Pure Data patch
 
     ![image](./speedTracker_code_LibPdInstance.png)
-    ![image](./speedTracker_PdPatchSend.png)
+
+    ![image](./SwordSizeScript_diameterSend.png)
+
+    6.2. Link the swingModelSound PD instance to the sword]
+
+    ![image](./SwordSizeScript_02.png)
