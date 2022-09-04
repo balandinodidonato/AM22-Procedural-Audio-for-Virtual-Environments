@@ -2,6 +2,7 @@
 2. Open the project in Unity 2021.3.5f1
 3. Check that everything runs fine
 4. Create a new empty object called "swingModelSound" and
+
     ![image](./sword-tracker.png)
 
     4.1. Add a "LibPd Instance" component 
